@@ -21,6 +21,7 @@ public class UserModel {
 	private String password;
 	
 	private long age=0l;
+	
 	public String getName() {
 		return name;
 	}

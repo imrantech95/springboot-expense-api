@@ -9,17 +9,13 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.aitech.expense.entity.User;
-import com.aitech.expense.entity.UserModel;
 import com.aitech.expense.exceptions.ResourceNotFoundException;
 import com.aitech.expense.service.UserService;
-
-import jakarta.validation.Valid;
 
 @RestController
 public class UserController {
@@ -27,15 +23,6 @@ public class UserController {
 	@Autowired
 	UserService userService;
 
-	@PostMapping("/register")
-	public ResponseEntity<User> save(@Valid @RequestBody UserModel user) {
-		return new ResponseEntity<User>(userService.createUser(user), HttpStatus.CREATED);
-	}
-
-	@PostMapping("/login")
-	public ResponseEntity<String> login() {
-		return new ResponseEntity<String>("user is logged in ", HttpStatus.OK);
-	}
 
 	@GetMapping("/users")
 	public List<User> getAllUsers(Pageable page) {
