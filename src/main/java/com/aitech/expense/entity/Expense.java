@@ -118,5 +118,4 @@ public class Expense {
 	public void setUpdatedAt(Timestamp updatedAt) {
 		this.updatedAt = updatedAt;
 	}
-
 }

@@ -46,6 +46,4 @@ public class UserModel {
 	public void setAge(long age) {
 		this.age = age;
 	}
-	
-	
 }

@@ -38,7 +38,5 @@ public class ErrorObject {
 	}
 	public void setTimestamp(Date date) {
 		this.timestamp = date;
-	}
-	
-	
+	}	
 }

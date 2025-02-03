@@ -18,6 +18,5 @@ public class AuthModel {
 	}
 	public void setPassword(String password) {
 		this.password = password;
-	}
-	
+	}	
 }
